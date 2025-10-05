@@ -1,0 +1,64 @@
+# --- Python / bytecode ---
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- MCP app runtime data ---
+# Keep repo clean; create a .gitkeep if you need the folder tracked.
+
+data/
+storage/
+*.db
+
+# --- Secrets & local config ---
+.env
+.env.*
+*.secret
+*.pem
+*.key
+*.pfx
+*.p12
+*.crt
+*.der
+*.keystore
+*.jks
+*.token
+*.creds
+*.cfg
+*.ini
+*.yaml.local
+*.json.local
+*credentials*
+secrets/
+
+# --- Logs & temp ---
+*.log
+logs/
+tmp/
+*.tmp
+*.bak
+
+# --- Editors/OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# --- Testing ---
+.coverage
+htmlcov/
+.pytest_cache/
+
+# --- Packaging (optional) ---
+pip-wheel-metadata/

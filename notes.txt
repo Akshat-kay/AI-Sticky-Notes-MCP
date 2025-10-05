@@ -1,0 +1,57 @@
+10 Random Facts About How LLMs Work:
+
+1. **Token-Based Processing**: LLMs don't read words as humans do - they break text into "tokens" which can be whole words, parts of words, or even punctuation. A single word like "understanding" might be split into multiple tokens.
+
+2. **Attention Mechanisms**: The "transformer" architecture uses attention mechanisms that allow the model to weigh the importance of different words in context. When processing "bank," it can determine if you mean a riverbank or financial bank based on surrounding tokens.
+
+3. **No True Memory**: LLMs don't actually remember previous conversations. Each interaction starts fresh, and any apparent "memory" within a conversation is just the model re-reading the entire conversation history each time.
+
+4. **Temperature Controls Randomness**: The "temperature" parameter affects creativity - lower temperatures (near 0) make outputs more predictable and deterministic, while higher temperatures increase randomness and creativity.
+
+5. **Billions of Parameters**: Modern LLMs have billions of "parameters" (weights) that were adjusted during training. These parameters are essentially numbers that determine how the model processes and generates text.
+
+6. **Next-Token Prediction**: At its core, an LLM is trained to predict the next most likely token in a sequence. Even complex reasoning emerges from this relatively simple training objective.
+
+7. **Emergent Abilities**: Larger models show "emergent abilities" - capabilities that smaller models don't have, which appear somewhat suddenly at certain scales, like multi-step reasoning or following complex instructions.
+
+8. **Context Window Limitations**: LLMs have a maximum "context window" - a limit to how much text they can consider at once. Older models might handle 2-4K tokens, while newer ones can process 100K+ tokens.
+
+9. **No Real Understanding of Time**: LLMs don't inherently understand dates, time passage, or "now" - they only know what was in their training data up to a certain cutoff date.
+
+10. **Layered Processing**: Text passes through many layers (often 50-100+) in the neural network, with each layer performing transformations that progressively build more abstract representations of the input.
+
+
+
+MCP Interview Prep - Automation Developer Role (8 Scenario-Based Questions):
+
+1. **Scenario: Building a File System Automation MCP Server**
+Q: "How would you design an MCP server that automates file operations across multiple directories? What resources and tools would you expose?"
+Key Points: Discuss exposing resources for directory listings, tools for file operations (read/write/move), implementing prompts for batch operations, error handling for permissions, and security considerations to prevent unauthorized access.
+
+2. **Scenario: Database Query Automation**
+Q: "You need to create an MCP server that allows AI assistants to query and update databases safely. How would you structure this?"
+Key Points: Talk about exposing database schemas as resources, parameterized queries as tools to prevent SQL injection, implementing read-only vs read-write permissions, transaction handling, and using prompts for complex multi-step database operations.
+
+3. **Scenario: API Integration and Workflow Automation**
+Q: "Your team needs to automate workflows across multiple third-party APIs (Slack, Jira, GitHub). How would you architect an MCP server for this?"
+Key Points: Discuss authentication management (OAuth, API keys), rate limiting, webhook handling, creating composite tools that chain multiple API calls, error recovery strategies, and exposing workflow templates as prompts.
+
+4. **Scenario: Real-time Data Processing**
+Q: "How would you handle a scenario where your MCP server needs to process real-time data streams and provide up-to-date information to AI clients?"
+Key Points: Explain resource subscription mechanisms, server-sent events for updates, caching strategies to balance freshness vs performance, and how to expose streaming data as MCP resources that update dynamically.
+
+5. **Scenario: Testing and Debugging MCP Servers**
+Q: "Walk me through how you would test an MCP server that automates deployment pipelines. What could go wrong?"
+Key Points: Discuss unit testing tools and resources separately, integration testing with actual MCP clients, mocking external services, logging strategies, handling timeout scenarios, and versioning your MCP protocol implementation.
+
+6. **Scenario: Security in Automation**
+Q: "An MCP server you built is being used to automate infrastructure changes. How do you ensure it's secure and doesn't become a vulnerability?"
+Key Points: Cover authentication and authorization, input validation for all tool parameters, principle of least privilege, audit logging of all actions, sandboxing dangerous operations, and implementing approval workflows for critical changes.
+
+7. **Scenario: Performance Optimization**
+Q: "Your MCP server is responding slowly when handling multiple concurrent automation requests. How would you diagnose and fix this?"
+Key Points: Discuss implementing async operations, connection pooling, caching frequently accessed resources, rate limiting clients, profiling bottlenecks, and horizontal scaling considerations for MCP servers.
+
+8. **Scenario: Error Handling and Resilience**
+Q: "Your automation MCP server interacts with unreliable external services. How do you design it to be resilient?"
+Key Points: Talk about retry logic with exponential backoff, circuit breaker patterns, graceful degradation, meaningful error messages in tool responses, transaction rollback capabilities, and maintaining state consistency when operations partially fail.
